@@ -10,7 +10,7 @@ Route::get('/matakuliah/show/{id?}', [MatakuliahController::class, 'show']);
 Route::get('/mahasiswa/{zian}',[MahasiswaController::class, 'show']);
 
 Route::get('/pcr', function () {
-    return 'aku raja minyakkkkk';
+    return 'aku raja minyakHHHHkkkk';
 });
 
 Route::get('/mahasiswa', function () {
