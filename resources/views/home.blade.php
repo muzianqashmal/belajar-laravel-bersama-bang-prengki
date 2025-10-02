@@ -119,25 +119,15 @@
 <div class="card">
     <div class="card-body">
        <h5 class="card-title">Form Pertanyaan</h5>
-<form action="{{ route('question.store') }}" method="POST">
-	@csrf
-        <form action="" method="POST">
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama</label>
-                <input type="text" class="form-control" name="Nama">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" name="Email">
-            </div>
-            <div class="mb-3">
-                <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                <textarea class="form-control" rows="4" name="pertanyaan"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
-        </form>
-    </div>
+@if ($errors->any())
+    </div class="alert alert-danger">
+    <>
+        @foreach ($errors->all() as $errors)
+            <li>{{$errors}}</li>
+            @endforeach
+    </ul>
 </div>
+@endif 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -148,4 +138,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
