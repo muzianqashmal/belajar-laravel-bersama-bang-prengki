@@ -38,11 +38,11 @@ class QuestionController extends Controller
 		    'email' => ['required','email'],
 		    'pertanyaan' => 'required|max:300|min:8',
       ],[
-            'nama.required=>'Nama tidak boleh kosong',
+            'nama.required'=>'Nama tidak boleh kosong',
             'email.email'=> 'email tidak valid'
             ]);
       }
-            
+
     /**
      * Display the specified resource.
      */
