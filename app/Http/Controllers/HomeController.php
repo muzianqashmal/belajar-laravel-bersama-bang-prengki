@@ -17,7 +17,7 @@ class HomeController extends Controller
             'list_pendidikan' => ['SD', 'SMP', 'SMA', 'S1', 'S2', 'S3'],
         ];
 
-        return view('home', $data);
+        return view('home', $data );
     }
 
     /**
