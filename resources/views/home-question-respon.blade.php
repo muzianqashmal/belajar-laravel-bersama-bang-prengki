@@ -54,7 +54,7 @@
     <div class="thankyou-container">
         <h2>Nama 🎉</h2>
         <p class="lead">Pertanyaan Anda telah berhasil dikirim.</p>
-
+  
         <blockquote>
             <strong>Pertanyaan Anda:</strong><br>
             {{pertanyaan}}
