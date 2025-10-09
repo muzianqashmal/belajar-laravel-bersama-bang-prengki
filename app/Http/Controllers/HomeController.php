@@ -11,13 +11,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data=[
-        'username'        => 'Heroku',
+        $data = [
+            'username'        => 'Heroku',
             'last_login'      => date('Y-m-d H:i:s'),
             'list_pendidikan' => ['SD', 'SMP', 'SMA', 'S1', 'S2', 'S3'],
         ];
 
-        return view('home', $data );
+        return view('home', $data);
     }
 
     /**
@@ -49,7 +49,7 @@ class HomeController extends Controller
      */
     public function edit(string $id)
     {
-        // 
+        //
     }
 
     /**

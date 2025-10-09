@@ -1,36 +1,36 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\MahasiswaController;
-use App\Http\Controllers\MatakuliahController;
-use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\HomeController;
-
-Route::get('/matakuliah', [MatakuliahController::class, 'index']);
-Route::get('/matakuliah/show/{id?}', [MatakuliahController::class, 'show']);
-
-Route::get('/mahasiswa/{zian}',[MahasiswaController::class, 'show']);
+use App\Http\Controllers\QuestionController;
 
 Route::get('/pcr', function () {
-    return 'aku raja minyakHHHHkkkk';
+    return 'Selamat Datang di Website Kampus PCR!';
 });
+use App\Http\Controllers\MatakuliahController;
 
 Route::get('/mahasiswa', function () {
-    return 'hallo mahasiswa';
+    return 'Hallo Mahasiswa';
 });
 
-Route::get('/nama/{zian}', function ($zian) {
-    return'nama saya:'.$zian;
+Route::get('/nama/{param1}', function ($param1) {
+    return 'Nama Saya: ' .$param1;
 });
 
-Route::get('/nim/{zian}', function ($zian='') {
-    return'nim saya:'.$zian;
+Route::get('/nim/{param1?}', function ($param1 = '') {
+    return 'Nim Saya: ' .$param1;
 });
+
+Route::get('/mahasiswa/{param1}', [MahasiswaController ::class,'show']) ;
 
 Route::get('/about', function () {
     return view('halaman-about');
 });
 
+Route::get('/matakuliah/show/{param1?}', [MatakuliahController ::class,'show']) ;
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
+        ->name('home');
 Route::post('question/store', [QuestionController::class, 'store'])
-		->name('question.store');
-Route::get('/home', [HomeController::class, 'index']);
+        ->name('question.store');

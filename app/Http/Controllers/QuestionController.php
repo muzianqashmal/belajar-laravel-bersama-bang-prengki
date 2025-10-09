@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,7 +10,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+      //
     }
 
     /**
@@ -27,22 +26,19 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());//
-      // $data['nama'] =$request->nama;
-      // $data['email'] =$request->email;//
-       //$data['pertanyaan'] =$request->pertanyaan;//
+        $request->validate([
+            'nama'       => 'required|max:10',
+            'email'      => ['required', 'email'],
+            'pertanyaan' => 'required|max:300|min:8',
+        ], [
 
-      // return view('home-question-respon', $data);//
-      $request->validate([
-		    'nama'  => 'required|max:10',
-		    'email' => ['required','email'],
-		    'pertanyaan' => 'required|max:300|min:8',
-      ],[
-            'nama.required'=>'Nama tidak boleh kosong',
-            'email.email'=> 'email tidak valid'
-            ]);
-      }
+            'nama.required' => 'Nama tidak boleh kosong',
+            'email.email'   => 'Email Tidak valid',
 
+        ]);
+       return redirect()->route('home')->with('info', 'Selamat, Kamu Lulus!');
+
+    }
     /**
      * Display the specified resource.
      */
