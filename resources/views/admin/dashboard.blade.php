@@ -73,7 +73,7 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Page visits</h2>
+                                    <h2 class="fs-5 fw-bold mb-0">Selamat datang di perpustakaan</h2>
                                 </div>
                                 <div class="col text-end">
                                     <a href="#" class="btn btn-sm btn-primary">See all</a>
@@ -84,8 +84,8 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th class="border-bottom" scope="col">Page name</th>
-                                        <th class="border-bottom" scope="col">Page Views</th>
+                                        <th class="border-bottom" scope="col">Nama Mahasiswa</th>
+                                        <th class="border-bottom" scope="col">lama peminjaman</th>
                                         <th class="border-bottom" scope="col">Page Value</th>
                                         <th class="border-bottom" scope="col">Bounce rate</th>
                                     </tr>
